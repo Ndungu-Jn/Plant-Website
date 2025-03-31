@@ -25,7 +25,7 @@
       <nav class="container flex items-center justify-between h-16 sm:h-20">
         <div class="font-[lobster] sm:text-2xl">The Plants</div>
 
-        <div id="nav-menu" class="absolute top-0 left-0 min-h-[80vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300">
+        <div id="nav-menu" class="absolute top-0 left-[100%] min-h-[80vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden">
           <ul class="flex flex-col items-center gap-8">
             <li>
               <a href="#home" class="nav-link">Home</a>
@@ -52,8 +52,8 @@
         </div>
 
         <!-- menu -- got it from Remix icons-->
-        <div>
-          <i class="ri-menu-4-fill"></i>
+        <div class="text-xl sm:text-3xl cursor-pointer z-50">
+          <i class="ri-menu-4-line" id="hambuger"></i>
          </div>
 
       </nav>
@@ -107,6 +107,7 @@
     <!--~~~~~~~~~~ SCROLLREVEAL ~~~~~~~~~~-->
 
     <!--~~~~~~~~~~ mainjs ~~~~~~~~~~-->
+    <script src="main.js"></script>
     
 </body>
 

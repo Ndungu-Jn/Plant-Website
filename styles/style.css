@@ -6,18 +6,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-red-400: oklch(0.704 0.191 22.216);
     --color-red-500: oklch(0.637 0.237 25.331);
-    --color-amber-500: oklch(0.769 0.188 70.08);
-    --color-yellow-400: oklch(0.852 0.199 91.936);
-    --color-green-500: oklch(0.723 0.219 149.579);
-    --color-blue-400: oklch(0.707 0.165 254.624);
-    --color-purple-400: oklch(0.714 0.203 305.504);
+    --color-green-950: oklch(0.266 0.065 152.934);
     --color-white: #fff;
     --spacing: 0.25rem;
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
-    --font-weight-bold: 700;
+    --tracking-wider: 0.05em;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -338,9 +331,6 @@
       max-width: 96rem !important;
     }
   }
-  .mx-auto {
-    margin-inline: auto;
-  }
   .box-border {
     box-sizing: border-box;
   }
@@ -440,11 +430,11 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-1 {
-    width: calc(var(--spacing) * 1);
-  }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-32 {
+    width: calc(var(--spacing) * 32);
   }
   .w-screen {
     width: 100vw;
@@ -1052,12 +1042,6 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
-  .bg-amber-500 {
-    background-color: var(--color-amber-500);
-  }
-  .bg-green-500 {
-    background-color: var(--color-green-500);
-  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1275,20 +1259,9 @@
   .align-top {
     vertical-align: top;
   }
-  .font-\[lobster\] {
-    font-family: lobster;
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
-  }
   .leading-none {
     --tw-leading: 1;
     line-height: 1;
-  }
-  .font-bold {
-    --tw-font-weight: var(--font-weight-bold);
-    font-weight: var(--font-weight-bold);
   }
   .text-balance {
     text-wrap: balance;
@@ -1362,9 +1335,6 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
-  }
-  .text-white {
-    color: var(--color-white);
   }
   .capitalize {
     text-transform: capitalize;
@@ -1804,26 +1774,13 @@
   .transform-view {
     transform-box: view-box;
   }
-  .sm\:bg-red-400 {
-    @media (width >= 40rem) {
-      background-color: var(--color-red-400);
-    }
-  }
-  .md\:bg-blue-400 {
-    @media (width >= 48rem) {
-      background-color: var(--color-blue-400);
-    }
-  }
-  .lg\:bg-yellow-400 {
-    @media (width >= 64rem) {
-      background-color: var(--color-yellow-400);
-    }
-  }
-  .xl\:bg-purple-400 {
-    @media (width >= 80rem) {
-      background-color: var(--color-purple-400);
-    }
-  }
+}
+body {
+  background-color: var(--color-green-950);
+  font-family: Jost;
+  --tw-tracking: var(--tracking-wider);
+  letter-spacing: var(--tracking-wider);
+  color: var(--color-white);
 }
 @property --tw-translate-x {
   syntax: "*";
@@ -1923,10 +1880,6 @@
   initial-value: 0;
 }
 @property --tw-leading {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
@@ -2107,6 +2060,10 @@
   inherits: false;
 }
 @property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }

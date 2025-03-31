@@ -21,12 +21,12 @@
 
 <body>
     <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
-    <header id="navbar">
-      <nav>
-        <div>The Plants</div>
+    <header id="navbar" class="bg-green-950 fixed w-full top-0 left-0 z-50">
+      <nav class="container flex items-center justify-between h-16 sm:h-20">
+        <div class="font-[lobster] sm:text-2xl">The Plants</div>
 
-        <div>
-          <ul>
+        <div id="nav-menu" class="absolute top-0 left-0 min-h-[80vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300">
+          <ul class="flex flex-col items-center gap-8">
             <li>
               <a href="#home" class="nav-link">Home</a>
             </li>
@@ -48,15 +48,14 @@
             <img src="assets/img/leaf-2.png" alt="leaf_image" class="w-32">
           </div>
 
-          
-
-          <!-- menu -- got it from Remix icons-->
-           <div>
-            <i class="ri-menu-4-fill"></i>
-           </div>
-
-
+        
         </div>
+
+        <!-- menu -- got it from Remix icons-->
+        <div>
+          <i class="ri-menu-4-fill"></i>
+         </div>
+
       </nav>
 
     </header>

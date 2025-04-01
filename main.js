@@ -1,19 +1,20 @@
 /*~~~~~~~~~~~~~~~ TOGGLE BUTTON ~~~~~~~~~~~~~~~*/
-const navMenu = document.getElementById("nav-menu")
-const navLink = document.querySelectorAll(".nav-link")
-const hamburger = document.getElementById("hamburger")
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".nav-link");
+const hamburger = document.getElementById("hamburger");
 
 hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle('-translate-x-full')
-    hamburger.classList.toggle("ri-close-large-fill")
-    
-})
-navLink.forEach(link => {
+    navMenu.classList.toggle("translate-x-full");
+    hamburger.classList.toggle("ri-close-large-fill");
+});
+
+navLinks.forEach(link => {
     link.addEventListener("click", () => {
-        navMenu.classList.toggle('-translate-x-full')
-        hamburger.classList.toggle("ri-close-large-fill")
-    })
-})
+        navMenu.classList.add("translate-x-full");
+        hamburger.classList.remove("ri-close-large-fill");
+    });
+});
+
 
 
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/

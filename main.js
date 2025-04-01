@@ -8,6 +8,12 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("ri-close-large-fill")
     
 })
+navLink.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.toggle('-translate-x-full')
+        hamburger.classList.toggle("ri-close-large-fill")
+    })
+})
 
 
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/

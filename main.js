@@ -5,6 +5,8 @@ const hamburger = document.getElementById("hamburger")
 
 hamburger.addEventListener("click", () => {
     navMenu.classList.toggle('-translate-x-full')
+    hamburger.classList.toggle("ri-close-large-fill")
+    
 })
 
 
